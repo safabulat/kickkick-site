@@ -115,13 +115,6 @@ header nav a:hover { color: var(--ink); text-decoration: none; }
 .stage figcaption { margin-top: 20px; font-size: 13px; color: var(--ink-faint); }
 figure { margin: 0; }
 
-/* Two files, one shown per colour scheme — the page follows the reader's system the way the app does. */
-.only-dark  { display: none; }
-@media (prefers-color-scheme: dark) {
-    .only-light { display: none; }
-    .only-dark  { display: block; }
-}
-
 /* ── sections ───────────────────────────────────────────────────────────── */
 section { padding: 76px 0; border-top: 1px solid var(--line); }
 .eyebrow {
