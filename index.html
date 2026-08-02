@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="darkreader-lock">
+<title>Deskick — a goal on your desk</title>
+<meta name="description" content="A football goal and a ball that float over your Mac desktop. Pull the ball back, let go, try to score. Clicks fall straight through to whatever you were working in.">
+<meta property="og:title" content="Deskick — a goal on your desk">
+<meta property="og:description" content="Your whole screen is the pitch. A tiny macOS desk toy that never gets in the way.">
+<link rel="icon" href="img/appicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="./"><img src="img/appicon.png" alt="">Deskick</a>
+    <nav>
+      <a href="#how">How it plays</a>
+      <a href="#quiet">Staying out of the way</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="wrap hero">
+  <h1>Your whole screen is the <em>pitch</em>.</h1>
+  <p class="lede">
+    A goal and a ball float above everything you are working in. Pull the ball back with the mouse, let
+    go, and try to score across your own desktop. There is no game window — nothing to move, nothing to
+    resize, nothing to close.
+  </p>
+  <div class="cta">
+    <span class="btn btn-soon">Coming to the Mac App Store</span>
+    <a class="btn btn-primary" href="#how">See how it plays</a>
+  </div>
+  <p class="cta-note">macOS 13 or later · Apple silicon · about a megabyte</p>
+</div>
+
+<div class="wrap stage">
+  <figure>
+    <img class="shot only-light" src="img/hero-light.jpg" alt="A football goal at the top of a Mac desktop and a ball being pulled back, with a dotted line predicting where the shot will go.">
+    <img class="shot only-dark"  src="img/hero-dark.jpg"  alt="A football goal at the top of a Mac desktop and a ball being pulled back, with a dotted line predicting where the shot will go.">
+    <figcaption>
+      Taking a shot. The dotted line is computed by the same physics the ball uses, so it cannot lie
+      about where the ball is going — including the bounce off the wall.
+    </figcaption>
+  </figure>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it plays</p>
+    <h2>One gesture, and a target that stops holding still</h2>
+    <p>
+      There are no levels, no modes and no menus to learn. The difficulty is the goal itself, and it
+      only gets harder because you are getting better.
+    </p>
+
+    <ul class="points">
+      <li>
+        <h3>Pull and release</h3>
+        <p>Drag the ball away from where you want it to go. A ring around it runs green to red as you
+           stretch, and the dotted path shows the real shot.</p>
+      </li>
+      <li>
+        <h3>Power is a real decision</h3>
+        <p>Under about a third of the pull the ball cannot reach the goal at all. A third to a half only
+           gets there from close range. Judging the distance <em>is</em> the shot.</p>
+      </li>
+      <li>
+        <h3>Score and the goal narrows</h3>
+        <p>Every goal in a row takes a slice off the mouth, down to about half width. Miss once and it
+           opens back up.</p>
+      </li>
+      <li>
+        <h3>From three in a row it drifts</h3>
+        <p>The goal starts sliding while you aim. That is the whole difficulty curve — a target that
+           stops holding still once you are good at it.</p>
+      </li>
+      <li>
+        <h3>A miss costs you the angle</h3>
+        <p>The ball stays exactly where it stopped, so your next attempt is taken from wherever the last
+           one abandoned you.</p>
+      </li>
+      <li>
+        <h3>The posts are real</h3>
+        <p>The ball bounces off the actual circle of the post, so hitting one can send it anywhere. It
+           feels like bad luck because it is.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="quiet">
+  <div class="wrap feature">
+    <div class="feature-text">
+      <p class="eyebrow">Staying out of the way</p>
+      <h2>Clicks fall straight through</h2>
+      <p>
+        Deskick covers the screen but listens only while your cursor is actually on the ball. Everywhere
+        else it is transparent to the mouse, so your editor, your browser and your Dock behave exactly as
+        if it were not running.
+      </p>
+      <p>
+        Clicking the ball never takes focus away from the app you were typing in, either — the window is
+        built so that it <em>cannot</em> become the active one. There are deliberately no keyboard
+        shortcuts, for the same reason.
+      </p>
+      <p>
+        The ball is also the only thing on your desktop that is <em>yours</em> to lose track of, so it
+        breathes gently while it waits.
+      </p>
+    </div>
+    <figure>
+      <img class="shot only-light" src="img/idle-light.jpg" alt="The goal and the ball sitting quietly on an otherwise empty desktop.">
+      <img class="shot only-dark"  src="img/idle-dark.jpg"  alt="The goal and the ball sitting quietly on an otherwise empty desktop.">
+    </figure>
+  </div>
+</section>
+
+<section id="desk">
+  <div class="wrap">
+    <p class="eyebrow">A desk toy, not an app</p>
+    <h2>It lives in the menu bar and costs you nothing while it waits</h2>
+    <p>
+      No Dock icon, no window in your app switcher, no notifications. The menu-bar icon carries the live
+      score, and everything else — new ball, reset, mute, volume, theme, always on top, open at login —
+      is one click away in its menu.
+    </p>
+    <img class="menubar-shot" src="img/menubar-shot.png" alt="The Deskick icon in the macOS menu bar showing a score of 21.">
+
+    <ul class="points">
+      <li>
+        <h3>Zero while idle</h3>
+        <p>A ball at rest with nothing animating stops the animation timer dead. Measured at 0.0% CPU
+           sitting on the desktop.</p>
+      </li>
+      <li>
+        <h3>Nothing to download but the app</h3>
+        <p>Every sound — the kick, the boards, the post, the goal — is synthesised in code when the app
+           starts. Nothing is streamed and nothing is fetched.</p>
+      </li>
+      <li>
+        <h3>It survives your day</h3>
+        <p>Sleep, waking up, plugging in headphones or an external display: the audio engine rebuilds
+           itself instead of quietly going silent by the afternoon.</p>
+      </li>
+      <li>
+        <h3>Light and dark</h3>
+        <p>Follows your system appearance, or pin it to one. Everything it draws carries its own soft
+           shadow so it stays readable on any wallpaper.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="privacy-teaser">
+  <div class="wrap">
+    <p class="eyebrow">Privacy</p>
+    <h2>It has nothing to collect and nowhere to send it</h2>
+    <p>
+      Deskick has no accounts, no analytics, no crash reporting and no network code of its own. Your score
+      is a number in your Mac's own preferences. There is no data to leak because none is ever gathered.
+      <a href="privacy.html">Read the privacy policy</a>.
+    </p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">Questions</p>
+    <h2>Before you ask</h2>
+
+    <details>
+      <summary>Does it get in the way while I work?</summary>
+      <p>That is the one thing it is built not to do. Outside the ball it is transparent to the mouse, it
+         cannot take keyboard focus, and it never raises itself over a full-screen app. If you want it
+         gone for a while, Show / Hide is in the menu.</p>
+    </details>
+    <details>
+      <summary>What about multiple monitors?</summary>
+      <p>Deskick plays on your main screen. If enough people want the ball to roam across displays, that
+         is a fair thing to add — say so and it will get looked at.</p>
+    </details>
+    <details>
+      <summary>Can it bounce off my actual windows?</summary>
+      <p>No, and that is on purpose. Tracking every window's edges live would mean asking for accessibility
+         permissions, and a small toy should not be demanding that kind of access.</p>
+    </details>
+    <details>
+      <summary>Does it need the microphone, camera, or my files?</summary>
+      <p>None of them. It asks for no permissions at all.</p>
+    </details>
+    <details>
+      <summary>Will it drain my battery if I leave it open?</summary>
+      <p>No. When the ball is at rest and nothing is animating there is no timer running and nothing being
+         redrawn — it measures 0.0% CPU. It only does work while something is actually moving.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Deskick — a tiny thing for your desk.</span>
+    <nav>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
