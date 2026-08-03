@@ -115,6 +115,42 @@ header nav a:hover { color: var(--ink); text-decoration: none; }
 .stage figcaption { margin-top: 20px; font-size: 13px; color: var(--ink-faint); }
 figure { margin: 0; }
 
+/* ── the machine ────────────────────────────────────────────────────────── */
+/* A MacBook drawn in CSS rather than shipped as an image. These screenshots are of a whole desktop,
+   and a whole desktop floating in a plain rectangle reads as a wallpaper until there is a laptop
+   around it. Drawing it keeps the page's no-external-requests rule, costs no bytes, scales with the
+   image and needs no second asset for dark mode. The two dimensions that matter are set as custom
+   properties so the same markup works at hero size and at half width. */
+.mac { margin: 0 auto; --bezel: 13px; --radius-lid: 17px; }
+.mac-lid {
+    background: linear-gradient(#4a4b4f, #232427 42%, #1b1c1f);
+    padding: var(--bezel);
+    padding-bottom: calc(var(--bezel) * 1.45);
+    border-radius: var(--radius-lid) var(--radius-lid) 5px 5px;
+    box-shadow: 0 28px 56px -26px rgba(0,0,0,.62), inset 0 0 0 1px rgba(255,255,255,.10);
+}
+.mac-lid .shot { border: 0; box-shadow: none; border-radius: 3px; }
+/* The base is a little wider than the lid, which is most of what makes the silhouette read as a
+   laptop at a glance. Held to 4% so it can never push the page into a horizontal scroll. */
+.mac-base {
+    width: 104%; margin-left: -2%;
+    height: calc(var(--bezel) * 1.2);
+    /* Hard stops rather than a smooth blend: the top face catching the light, then the front edge
+       rolling away from it, is what gives the slab any thickness at this size. */
+    background: linear-gradient(#e4e7ea 0 16%, #bcc2c8 16% 52%, #8d9399 52%, #6d7379);
+    border-radius: 0 0 calc(var(--radius-lid) * 0.62) calc(var(--radius-lid) * 0.62);
+    box-shadow: 0 16px 26px -14px rgba(0,0,0,.5);
+    position: relative;
+}
+/* The thumb cutout on the front lip. */
+.mac-base::after {
+    content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 13%; height: 44%;
+    background: rgba(0,0,0,.17);
+    border-radius: 0 0 7px 7px;
+}
+.feature .mac { --bezel: 8px; --radius-lid: 11px; }
+
 /* ── sections ───────────────────────────────────────────────────────────── */
 section { padding: 76px 0; border-top: 1px solid var(--line); }
 .eyebrow {
