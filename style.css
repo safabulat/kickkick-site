@@ -169,10 +169,12 @@ h2 + p { margin: 0; max-width: 62ch; color: var(--ink-soft); font-size: 17px; }
 .points h3 { margin: 0 0 5px; font-size: 16px; letter-spacing: -0.012em; }
 .points p { margin: 0; color: var(--ink-soft); font-size: 15px; }
 
-/* A long slice of the real menu bar rather than a tight crop around one icon: the point is that the
-   toy sits in the row you already have, next to everything else, so the row has to be visible. */
+/* A slice of the real menu bar rather than a tight crop around one icon: the point is that the toy
+   sits in the row you already have, next to everything else, so the row has to be visible. Trimmed on
+   the left, because the empty stretch out there was showing nothing, and centred so it sits over the
+   middle of the two columns beneath it rather than hanging off the left edge. */
 .menubar-shot {
-    display: block; width: 100%; max-width: 720px; height: auto; margin: 26px 0 0;
+    display: block; width: 100%; max-width: 520px; height: auto; margin: 26px auto 0;
     border-radius: 8px; border: 1px solid var(--line);
 }
 
