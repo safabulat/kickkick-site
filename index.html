@@ -19,6 +19,7 @@
     <nav>
       <a href="#how">How it plays</a>
       <a href="#quiet">Staying out of the way</a>
+      <a href="#price">Price</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
     </nav>
@@ -38,7 +39,7 @@
     <span class="btn btn-soon">Coming to the Mac App Store</span>
     <a class="btn btn-primary" href="#how">See how it plays</a>
   </div>
-  <p class="cta-note">macOS 13 or later · Apple silicon · about a megabyte</p>
+  <p class="cta-note">$2.99, paid once · macOS 13 or later · Apple silicon · about a megabyte</p>
 </div>
 
 <div class="wrap stage">
@@ -124,19 +125,24 @@
 <section id="desk">
   <div class="wrap">
     <p class="eyebrow">A desk toy, not an app</p>
-    <h2>It lives in the menu bar and costs you nothing while it waits</h2>
+    <h2>It lives in the menu bar and stays out of your way while it waits</h2>
     <p>
       No Dock icon, no window in your app switcher, no notifications. The menu-bar icon carries the live
       score, and everything else — new ball, reset, mute, volume, theme, always on top, open at login —
       is one click away in its menu.
     </p>
-    <img class="menubar-shot" src="img/menubar-shot.png" alt="The Deskick icon in the macOS menu bar showing a score of 21.">
+    <img class="menubar-shot" src="img/menubar-shot.png" alt="A slice of the real macOS menu bar: the Deskick icon carrying a score of 36, sitting among the other menu-bar items alongside the battery and the clock.">
 
     <ul class="points">
       <li>
-        <h3>Zero while idle</h3>
-        <p>A ball at rest with nothing animating stops the animation timer dead. Measured at 0.0% CPU
-           sitting on the desktop.</p>
+        <h3>Idle means idle</h3>
+        <p>A ball at rest stops the animation timer dead — nothing is drawn and nothing is stepped.
+           Sampled on a settled desktop, the app's main thread is asleep in every single sample.</p>
+      </li>
+      <li>
+        <h3>Half a percent, and it buys something</h3>
+        <p>All that keeps running is the audio engine holding the output awake, around 0.5% of one core.
+           Let the output sleep and the first kick after a quiet spell loses its attack.</p>
       </li>
       <li>
         <h3>Nothing to download but the app</h3>
@@ -154,6 +160,28 @@
            shadow so it stays readable on any wallpaper.</p>
       </li>
     </ul>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <p class="eyebrow">Price</p>
+    <h2>One price, once</h2>
+    <p>
+      No subscription, no in-app purchases, no ads, no "pro" version withholding half the game. You buy
+      it and it is yours.
+    </p>
+    <div class="price-card">
+      <div class="price-tag">
+        <span class="amount">$2.99</span>
+        <span class="once">paid once, on the Mac App Store</span>
+      </div>
+      <ul>
+        <li>Every future update to Deskick is included.</li>
+        <li>Works on all your own Macs through Family Sharing.</li>
+        <li>Nothing is locked, timed or held back.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -196,8 +224,10 @@
     </details>
     <details>
       <summary>Will it drain my battery if I leave it open?</summary>
-      <p>No. When the ball is at rest and nothing is animating there is no timer running and nothing being
-         redrawn — it measures 0.0% CPU. It only does work while something is actually moving.</p>
+      <p>No. When the ball is at rest there is no timer running and nothing being redrawn — sampled on a
+         settled desktop, the main thread is asleep in every sample. What is left is the audio engine
+         keeping the output awake, about half a percent of one core, and that is what stops the first
+         kick after a quiet spell from arriving without its attack.</p>
     </details>
   </div>
 </section>

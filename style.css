@@ -133,10 +133,24 @@ h2 + p { margin: 0; max-width: 62ch; color: var(--ink-soft); font-size: 17px; }
 .points h3 { margin: 0 0 5px; font-size: 16px; letter-spacing: -0.012em; }
 .points p { margin: 0; color: var(--ink-soft); font-size: 15px; }
 
+/* A long slice of the real menu bar rather than a tight crop around one icon: the point is that the
+   toy sits in the row you already have, next to everything else, so the row has to be visible. */
 .menubar-shot {
-    display: block; width: 170px; height: auto; margin: 26px 0 0;
+    display: block; width: 100%; max-width: 720px; height: auto; margin: 26px 0 0;
     border-radius: 8px; border: 1px solid var(--line);
 }
+
+/* ── price ──────────────────────────────────────────────────────────────── */
+.price-card {
+    margin: 30px 0 0; padding: 30px 32px;
+    background: var(--bg-raise); border: 1px solid var(--line); border-radius: var(--radius);
+    max-width: 560px;
+}
+.price-tag { display: flex; align-items: baseline; gap: 10px; }
+.price-tag .amount { font-size: 42px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+.price-tag .once { color: var(--ink-faint); font-size: 14px; }
+.price-card ul { margin: 20px 0 0; padding-left: 20px; }
+.price-card li { color: var(--ink-soft); font-size: 15px; margin: 6px 0; }
 
 kbd {
     display: inline-block; padding: 1px 6px; margin: 0 1px;
