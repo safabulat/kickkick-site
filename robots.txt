@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kickkick.bulatapps.com/sitemap.xml
